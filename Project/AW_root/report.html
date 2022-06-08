@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Send A Report to VDOT</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" type="text/css" href="report.css">
+	</head>
+	<body>
+		<header>
+			<nav>
+				<ul>
+					<li><img src="images/logo.png" width="250" alt="VDOT Logo"></li>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="history.html">About</a></li>
+					<li><a href="what-we-do.html">What We Do</a></li>
+					<li><a href="info.html">Contact your Local VDOT</a></li>
+				</ul>
+			</nav>
+			<div id="call">VDOT Call Center 1-800-FOR-ROAD (367-7623)</div>			
+		</header>
+		<div id="allcontent">
+		<section>
+			<form action="http://www.grtscott.net/formhandler.php" method="POST">
+				<h1>Report a Road Issue</h1>
+				<fieldset>
+				<legend>Contact Information</legend>
+				<div class="tableRow">
+					<p><label for="name">Name:</label></p>
+					<p><input type="text" name="name" id="name" value="" placeholder="John Doe" required></p>
+				</div>
+				<div class="tableRow">
+					<p><label for="address">Street Address:</label>
+					<p><input type="text" name="address" id="address" value="" placeholder="123 traffic way" required><br>
+				</div>
+				<div class="tableRow">	
+					<p><label for="city">City:</label>
+					<p><input type="text" name="city" id="city" value="" placeholder="Richmond" required><br>
+				</div>
+				<div class="tableRow">	
+					<p><label for="state">State:</label>
+					<p><select name="state">
+						<option value="AL">Alabama</option>
+						<option value="AK">Alaska</option>
+						<option value="AZ">Arizona</option>
+						<option value="CA">California</option>
+						<option value="CO">Colorado</option>
+						<option value="CT">Connecticut</option>
+						<option value="DE">Delaware</option>
+						<option value="FL">Florida</option>
+						<option value="GA">Georgia</option>
+						<option value="HI">Hawaii</option>
+						<option value="ID">Idaho</option>
+						<option value="IL">Illinois</option>
+						<option value="IN">Indiana</option>
+						<option value="IA">Iowa</option>
+						<option value="KS">Kansas</option>
+						<option value="KY">Kentucky</option>
+						<option value="LA">Louisiana</option>
+						<option value="ME">Maine</option>
+						<option value="MD">Maryland</option>
+						<option value="MA">Massachusetts</option>
+						<option value="MI">Michigan</option>
+						<option value="MN">Minnesota</option>
+						<option value="MS">Mississippi</option>
+						<option value="MO">Missouri</option>
+						<option value="MT">Montana</option>
+						<option value="NE">Nebraska</option>
+						<option value="NV">Nevada</option>
+						<option value="NH">New Hampshire</option>
+						<option value="NJ">New Jersey</option>
+						<option value="NM">New Mexico</option>
+						<option value="NY">New York</option>
+						<option value="NC">North Carolina</option>
+						<option value="ND">North Dakota</option>
+						<option value="OH">Ohio</option>
+						<option value="OK">Oklahoma</option>
+						<option value="OR">Oregon</option>
+						<option value="PA">Pennsylvania</option>
+						<option value="RI">Rhode Island</option>
+						<option value="SC">South Carolina</option>
+						<option value="SD">South Dakota</option>
+						<option value="TN">Tennessee</option>
+						<option value="TX">Texas</option>
+						<option value="UT">Utah</option>
+						<option value="VT">Vermont</option>
+						<option value="VA" selected>Virginia</option>
+						<option value="WA">Washington</option>
+						<option value="WV">West Virginia</option>
+						<option value="WI">Wisconsin</option>
+						<option value="WY">Wyoming</option>
+					</select></p>
+					</div>
+					
+					<div class="tableRow">		
+					<p><label for="zip">Zip:</label></p>
+					<p><input type="number" name="zip" id="zip" value="" placeholder="12345" required></p>
+					</div>
+					
+					<div class="tableRow">	
+					<p><label for="phone">Phone Number:</label></p>
+					<p><input type="tel" name="phone" id="phone" value="" placeholder="123-456-7890" required></p>
+					</div>
+					
+					<div class="tableRow">	
+					<p><label for="email_address">Email:</label></p>
+					<p><input type="email" name="email" id="email_address" placeholder="john.doe@email.com" value=""></p>
+					</div>
+					<br>
+				<fieldset>
+				<legend>Information to be Reported</legend>				
+				
+				<div class="tableRow">
+					<p>Please select how you would like to be contacted about this issue:</p>
+					<p><input type="radio" name="contact" value="phone" id="call_me">
+					<label for="call_me">I would like to be called.</label><br>
+					<input type="radio" name="contact" value="email" id="email_me">
+					<label for="email_me">I would like to be emailed.</label><br>
+					<input type="radio" name="contact" value="none" id="none">
+					<label for="none">Please do not contact me.</label></p>
+				</div>
+				<div class="tableRow">
+					<p>My report involves the following issue(s):</p>
+					<p><input type="checkbox" name="concerns[]" value="trees" id="downed_trees">
+						<label for="downed_trees">Downed trees</label><br>
+						
+						<input type="checkbox" name="concerns[]" value="visability" id="visability">
+						<label for="visability">Visability issues</label><br>
+						
+						<input type="checkbox" name="concerns[]" value="traffic_study" id="traffic_study">
+						<label for="traffic_study">Speed limit change</label><br>
+						
+						<input type="checkbox" name="concerns[]" value="safety" id="safety_issues">
+						<label for="safety_issues">Safety concerns</label><br>
+						
+						<input type="checkbox" name="concerns[]" value="pipes" id="drainage">
+						<label for="drainage">Clogged pipes and drains</label><br>
+						
+						<input type="checkbox" name="concerns[]" value="paving" id="potholes">
+						<label for="potholes">Potholes</label><br>
+						
+						<input type="checkbox" name="concerns[]" value="other" id="other">
+						<label for="other">Other</label></p>
+				</div>
+				<div class="tableRow">
+					<p>Comments/Issues: </p>
+					<p><textarea name="comments" placeholder="Details about the problem you are reporting" required></textarea></p>
+				</div>
+				
+				<div class="tableRow">
+					<p></p>
+					<p><input type="submit"></p>
+				</div>
+				</fieldset>
+				</fieldset>
+				
+			</form>
+		</section>
+		</div>
+		<footer>
+			For current road conditions, please visit <span><a href="http://www.511virginia.org">our 511 system</a></span>.
+		</footer>
+		
+	</body>
+</html>
